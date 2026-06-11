@@ -324,7 +324,7 @@ useEffect(() => {
   const token = localStorage.getItem("token")
   if (!token) return
 
-  fetch(`http://localhost:8000/profile`, {
+  fetch(`https://flowtask-ai-powered-real-time.onrender.com/profile`, {
     headers: { Authorization: `Bearer ${token}` }
   })
     .then(res => res.json())

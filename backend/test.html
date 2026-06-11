@@ -20,7 +20,7 @@ let socket;
 
 function connectWS() {
 
-    socket = new WebSocket("ws://127.0.0.1:8000/ws");
+    socket = new WebSocket("wss://flowtask-ai-powered-real-time.onrender.com/ws");
 
     socket.onopen = () => {
         document.getElementById("output").innerHTML +=

@@ -15,7 +15,7 @@ export function WebSocketProvider({ children }) {
     const token = localStorage.getItem("token")
     if (!token) return
     try {
-      const res  = await fetch("http://127.0.0.1:8000/notifications", {
+      const res  = await fetch("https://flowtask-ai-powered-real-time.onrender.com/notifications", {
         headers: { Authorization: `Bearer ${token}` },
       })
       const data = await res.json()
@@ -46,7 +46,7 @@ export function WebSocketProvider({ children }) {
     }
 
     console.log("[WS] Connecting…")
-    const ws = new WebSocket(`ws://127.0.0.1:8000/ws?token=${token}`)
+    const ws = new WebSocket(`wss://flowtask-ai-powered-real-time.onrender.com/ws?token=${token}`)
     socketRef.current = ws
 
     ws.onopen = () => {
@@ -126,7 +126,7 @@ export function WebSocketProvider({ children }) {
   const markOneRead = async (id) => {
     const token = localStorage.getItem("token")
     try {
-      await fetch(`http://127.0.0.1:8000/notifications/${id}/read`, {
+      await fetch(`https://flowtask-ai-powered-real-time.onrender.com/notifications/${id}/read`, {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` },
       })
@@ -138,7 +138,7 @@ export function WebSocketProvider({ children }) {
   const markAllRead = async () => {
     const token = localStorage.getItem("token")
     try {
-      await fetch("http://127.0.0.1:8000/notifications/read-all", {
+      await fetch("https://flowtask-ai-powered-real-time.onrender.com/notifications/read-all", {
         method: "PATCH",
         headers: { Authorization: `Bearer ${token}` },
       })
