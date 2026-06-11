@@ -33,9 +33,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173","http://flowtask-ai-powered-real-time-colla.vercel.app"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://flowtask-ai-powered-real-time-colla.vercel.app",
+    ],
     allow_credentials=True,
-    allow_methods=["*"],    
+    allow_methods=["*"],
     allow_headers=["*"],
 )
 
