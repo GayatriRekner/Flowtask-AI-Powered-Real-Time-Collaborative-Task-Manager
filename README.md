@@ -4,10 +4,11 @@ A full-stack, real-time collaborative task management application with AI-powere
 
 ---
 
-## 🌐 Live Demo
+## 🌐 Live Application
 
-> **Frontend:** _coming soon_
-> **Backend API:** _coming soon_
+Experience FlowTask live:
+
+🔗 https://flowtask-ai-powered-real-time-colla.vercel.app
 
 ---
 ## 📸 Screenshots
